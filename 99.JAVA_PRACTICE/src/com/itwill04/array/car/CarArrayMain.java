@@ -23,6 +23,7 @@ public class CarArrayMain {
 			carArray[i].print();
 		}
 		System.out.println("2.전체주차구획수");
+		System.out.println("2.전체주차구획수");
 
 		System.out.println("3.남은주차구획수");
 		
