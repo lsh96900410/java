@@ -15,6 +15,7 @@ public class DvdShopMain {
 			
 			 //회원이Dvd을 대여
 			 
+		
 			 //Dvd객체참조변수를 회원의 멤버변수에대입
 			 
 			

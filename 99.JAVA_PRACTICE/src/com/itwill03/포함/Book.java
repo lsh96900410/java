@@ -28,10 +28,13 @@ public class Book {
 	//<<기능>>
 	//  책정보출력
 	/*
-	 * public static void headerPrint() {
+	public static void headerPrint() {
 	System.out.print("번호\t"+"제목\t"+"분류\t"+"설명");
 	}
 	*/
+	public void rentBook() {
+		
+	}
 	public void printBookInfo() {
 		System.out.print("책 정보 : "+bookNo+"\t"+bookTitle+"\t"+bookType+"\t"+bookExplan);
 	}

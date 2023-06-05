@@ -13,7 +13,7 @@ public class BookLibraryMain {
 		Book b = new Book();
 		
 		 // 회원이 책들 대여
-		  bookMember.se
+		 
 		 
 		 //책객체참조변수를 회원의 멤버변수에대입
 		 
