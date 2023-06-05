@@ -21,6 +21,7 @@ public class StudentArrayMain {
 		 * 1. 전체학생총점,평균,평점계산
 		 */
 		System.out.println("1. 전체학생총점,평균,평점계산");
+		for(int i =0 ; i<students.length ;)
 		/*
 		 * 2. 전체학생 총점으로 석차계산
 		 */
