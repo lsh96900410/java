@@ -12,7 +12,7 @@ public class AcademyMemberTypeCastingMain {
 		AcademyMember m5=new AcademyGangsa(5, "정강사", "빅데이터");
 	
 		AcademyMember m6=new AcademyStaff(6, "박원장", "원장");
-		AcademyMember m7=new AcademyStaff(6, "나대리", "교무");
+		AcademyMember m7=new AcademyStaff(7, "나대리", "교무");
 		/***** AcademyMember에 정의되지않은 메쏘드가 호출불가능 *****/
 		/*
 		String ban = m1.getBan();
@@ -22,8 +22,14 @@ public class AcademyMemberTypeCastingMain {
 			- AcademyMember타입에 정의된 print메쏘드를 호출하면
 			- AcademyMember의 자식타입객체의 재정의된 print메쏘드가호출된다 
 		***/
-		
+		System.out.println("----- AcademyMember 전체출력 ------ ");
 		m1.print();
+		m2.print();
+		m3.print();
+		m4.print();
+		m5.print();
+		m6.print();
+		m7.print();
 		
 		
 		
