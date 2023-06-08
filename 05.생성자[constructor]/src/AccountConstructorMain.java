@@ -23,8 +23,10 @@ public class AccountConstructorMain {
 		account2.headerPrint();
 		account2.print();
 		*/
-		
-		
+		System.out.println(account1);
+		System.out.println(account2);
+		//toString 재정의 x = 주소값
+		//toString 재정의 o = 재정의된값 ( alt sft s ->s)
 		
 		
 		

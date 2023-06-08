@@ -38,8 +38,35 @@ public class ObjectMain {
 		}else { 
 			System.out.println("o1과 o3의 주소가 동일하지않다.[비교연산자]");
 		}	
+	System.out.println("----------------- ObjectChild---------------------");
+	ObjectChild oc1=new ObjectChild();
+	ObjectChild oc2=new ObjectChild();
+	ObjectChild oc3=oc1;
+	
+	System.out.println("---------- 재정의된 equlas ------------");
+	if(oc1.equals(oc3)) {
+		System.out.println("oc1과 oc3주소가 동일하다");
+		}else {
+			System.out.println("oc1과 oc3주소가 동일하지않다");
+		}
+	
+	System.out.println("-------- 재정의된 toString -----------");
+	System.out.println(oc1.toString());
+	System.out.println(oc2);
+	System.out.println(oc3);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	}
-		
+	
+	
 
 }
