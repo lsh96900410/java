@@ -10,7 +10,12 @@ public class Book {
 	   책분류
 	   책설명
 	  */
-	public Book() {
+	private int bookNo;
+	private String bookTitle;
+	private String bookType;
+	private String bookExplan;
+	
+public Book() {
 		
 	}
 	public Book(int bookNo,String bookTitle, String bookType, String bookExplan) {
@@ -19,11 +24,6 @@ public class Book {
 		this.bookType=bookType;
 		this.bookExplan=bookExplan;
 	}
-	
-	private int bookNo;
-	private String bookTitle;
-	private String bookType;
-	private String bookExplan;
 
 	//<<기능>>
 	//  책정보출력
