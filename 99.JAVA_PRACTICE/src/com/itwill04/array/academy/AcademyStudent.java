@@ -1,3 +1,4 @@
+package com.itwill04.array.academy;
 
 public class AcademyStudent extends AcademyMember {
 	public String ban; //반

@@ -1,3 +1,4 @@
+package com.itwill04.array.academy;
 
 
 public class AcademyMemberArrayTypeCastingMain {

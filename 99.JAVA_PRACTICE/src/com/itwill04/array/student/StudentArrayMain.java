@@ -20,8 +20,7 @@ public class StudentArrayMain {
 		/*
 		 * 1. 전체학생총점,평균,평점계산
 		 */
-		System.out.println("1. 전체학생총점,평균,평점계산");
-		for(int i =0 ; i<students.length ;)
+		
 		/*
 		 * 2. 전체학생 총점으로 석차계산
 		 */
@@ -46,7 +45,30 @@ public class StudentArrayMain {
 		 * 7. 학생학점순으로 오름차순정렬
 		 */
 		System.out.println("6. 학생학점순으로 오름차순정렬");
-		
+		/*
+		 * 8. 학생이름순으로 오름차순정렬
+		 */
+		System.out.println("8. 학생이름순으로 오름차순정렬");
+		System.out.println(">>>정렬전");
+		Student.headerPrint();
+		for (Student student : students) {
+			student.print();
+		}
+		for (int i = 0; i < students.length-1; i++) {
+			for (int j = 0; j < students.length-1; j++) {
+				if(students[j].getName().compareTo(students[j+1].getName())>0) {
+					Student temp=students[j];
+					students[j]=students[j+1];
+					students[j+1] = temp;
+				}else if(students[j].getName().equals(students[j+1].getName())) {
+					//번호 오름차순 secondary sort
+				}
+			}
+		}
+		System.out.println(">>>정렬후");
+		Student.headerPrint();
+		for (Student student : students) {
+			student.print();
+		}
 	}
-
 }

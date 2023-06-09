@@ -33,7 +33,7 @@ public class StringCompareMain {
 			System.out.println("\\\"KIM\\\"     객체의 문자열과 \"KIM\"객체의 문자열이 동일하다");
 		}
 		
-		int unicodeGap = "aaa".compareTo("aaa");
+		int unicodeGap = "aaa".compareTo("aaa"); 
 		System.out.println(unicodeGap);
 		unicodeGap = "aaa".compareTo("aab");
 		System.out.println(unicodeGap);
