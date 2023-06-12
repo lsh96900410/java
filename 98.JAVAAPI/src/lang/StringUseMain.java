@@ -94,35 +94,42 @@ public class StringUseMain {
 				}
 			}
 			/*
-			 * quiz : 김씨를 찾아 새로운배열에 담아보세요
+			 * Quiz:김씨를찾아 새로운배열에 담아보세요
 			 */
-			String[] kimArray=null;
-			String[] names1 = {"정경호" ,"김미숙" ,"최경녀","김은희","신명숙"};
-			for (int i = 0; i < names1.length; i++) {
-				if(names1[i].startsWith("김")) {
-					
+			int count=0;
+			for (String tempName : names) {
+				if(tempName.startsWith("김")) {
+					count++;
 				}
 			}
+			String[] kimArray=new String[count];
+			int kimIndex=0;
+			for (String tempName : names) {
+				if(tempName.startsWith("김")) {
+					kimArray[kimIndex] = tempName;
+					kimIndex++;
+				}
+			}
+			System.out.println("----------kim---------");
+			for (String kimName : kimArray) {
+				System.out.println(kimName);
+			}
 			
-			
-			System.out.println("--------------endsWith---------------"); // 끝 문자열,문자형 찾음
+			System.out.println("--------------endsWith---------------");
 			String[] fileNameArray= {
-					"a.jgp","s.txt","d.gif","zz.doc","nn.java"
+					"a.jpg","s.txt","d.gif","zz.doc","nn.java"
 			};
 			for (int i = 0; i < fileNameArray.length; i++) {
-				if(fileNameArray[i].endsWith(".gif")||fileNameArray[i].endsWith("jpg")) {
+				if(fileNameArray[i].endsWith(".gif") || fileNameArray[i].endsWith(".jpg")) {
 					System.out.println(fileNameArray[i]);
 				}
 			}
-			
-			
-			System.out.println("--------------trim-------------------"); //공백제거 ( 글자 사이공백 제거 x ) 
-			String id2="   guard   ";
+			System.out.println("--------------trim-------------------");
+			String id2="  guar d   ";
 			System.out.println(id2.length());
 			System.out.println(id2.trim().length());
-			System.out.println(id2.trim());
 			String chatMessage="                   ";
-			if(chatMessage.trim().length()==0){
+			if(chatMessage.trim().length()==0) {
 				System.out.println("전송안함");
 			}
 	}

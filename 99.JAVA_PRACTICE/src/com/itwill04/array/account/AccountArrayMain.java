@@ -1,5 +1,7 @@
 package com.itwill04.array.account;
 
+import java.util.Iterator;
+
 public class AccountArrayMain {
 
 	public static void main(String[] args) {
@@ -144,13 +146,21 @@ public class AccountArrayMain {
 		/*
 		 * 배열크기증가
 		 */
+		Account[] tempAccounts=new Account[accounts.length+1];
+ 		for (int i = 0; i < accounts.length; i++) {
+			tempAccounts[i]=accounts[i];
+		}
+		
+		
 		
 		
 		/*
 		  마지막인덱스에 Account객체대입
 		  accounts[9] = newAccount;
 		 */
-		
+ 		Account newAccount=new Account(1112, " NEWACCOUNT",45000,3.5);
+		tempAccounts[tempAccounts.length-1] = newAccount;
+		accounts=tempAccounts;
 		
 		System.out.println("-------추가후출력----------");
 		for(int i=0;i<accounts.length;i++) {
