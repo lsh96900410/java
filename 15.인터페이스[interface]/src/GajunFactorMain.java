@@ -10,14 +10,21 @@ public class GajunFactorMain {
 		GajunAudio audio1=new GajunAudio();
 		GajunAudio audio2=new GajunAudio();
 		
+		GajunSmartPhone sp1=new GajunSmartPhone();
+		GajunSmartPhone sp2=new GajunSmartPhone();
+		GajunSmartPhone sp3=new GajunSmartPhone();
+		
 		GajunOnOff gajun1 =tv1;
 		
-		GajunOnOff[] gajunArray=new GajunOnOff[5];
+		GajunOnOff[] gajunArray=new GajunOnOff[8];
 		gajunArray[0]=tv1; 
 		gajunArray[1]=tv2; 
 		gajunArray[2]=tv3; 
 		gajunArray[3]=audio1; 
-		gajunArray[4]=audio2; 
+		gajunArray[4]=audio2;
+		gajunArray[5]=sp1;
+		gajunArray[6]=sp2;
+		gajunArray[7]=sp3;
 		 
 		System.out.println("---------- 가전제품검사소 ----------");
 		/*
@@ -26,8 +33,8 @@ public class GajunFactorMain {
 		 *  그래야 가전제품검사 프로그램을 한번만들어서 변경없이 
 		 *  계속사용할수있으니까요
 		 */
-		GajunOnOff[] receiveGajunArray=gajunArray;
 		
+		GajunOnOff[] receiveGajunArray=gajunArray;
 		for (int i = 0; i < receiveGajunArray.length; i++) {
 			System.out.println("--------------- 검사시작 -----------------");
 			 receiveGajunArray[i].on();
@@ -38,6 +45,12 @@ public class GajunFactorMain {
 			receiveGajunArray[i].off();
 			System.out.println("--------------- 검사끝 출고-----------------");
 		}
+		/******************************
+		GajunGumsa gajunGumsa=new GajunGumsa();
+		gajunGumsa.setGajuns(gajunArray)
+		gajunGumsa.gumsa();
+		******************************/
+		
 	}
 
 }

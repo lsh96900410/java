@@ -1,4 +1,4 @@
-package com.itwill05.service.account;
+     package com.itwill05.service.account;
 
 import java.util.Iterator;
 
@@ -50,6 +50,13 @@ public class AccountService {
 		 *   - 기존배열보다큰배열생성
 		 *   - 기존데이타 옮김
 		 */
+		Account[] tempAccount = new Account[accounts.length+1];
+		for (int i = 0; i < accounts.length; i++) {
+			tempAccount[i]=accounts[i];
+		}
+		tempAccount[tempAccount.length-1]=newAccount;
+		accounts=tempAccount;
+		
 		
 	}
 	
