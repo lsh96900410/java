@@ -15,6 +15,7 @@ public class AcademyMember extends Object{
 		this.no = no;
 		this.name = name;
 	}
+	
 	public void print(){
 			System.out.print(this.no+"\t"+this.name+"\t");
 	}
