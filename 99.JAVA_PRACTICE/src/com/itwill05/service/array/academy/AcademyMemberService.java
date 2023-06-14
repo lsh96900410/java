@@ -20,13 +20,15 @@ public class AcademyMemberService {
 		members[6] = new AcademyGangsa(7, "DIM", "OS");
 		members[7] = new AcademyStaff(8, "AIM", "영업");
 		members[8] = new AcademyStaff(9, "QIM", "생산");
-
-	}
+	
+	
 
 	/*
 	 * 1.AcademyMember 전체출력
 	 */
-
+	for(int i=0;i<members.length;i++) {
+		members[i].print();
+	}
 	/*
 	 * 2-1.번호 1 번 AcademyMember 객체 참조변수반환해줘
 	 * 
@@ -53,4 +55,5 @@ public class AcademyMemberService {
 	 * 5.AcademyMember 중에서 영업부서인 AcademyStaff   객체들 배열참조변수반환해줘[OPTION] 
 	 * 5.AcademyMember 중에서 자바과목인 AcademyGangsa  객체들 배열참조변수반환해줘[OPTION]
 	 */
-}
+	}
+

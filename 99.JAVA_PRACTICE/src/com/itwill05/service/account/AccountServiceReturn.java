@@ -60,7 +60,7 @@ public class AccountServiceReturn {
 	 * 1.은행계좌들 총계좌수 반환메써드
 	 */
 	public int getTotAccountNumber() {
-		return 0;
+		return accounts.length;
 	}
 
 	/*
@@ -77,20 +77,21 @@ public class AccountServiceReturn {
 	 * 3.은행계좌들 총잔고를 반환하는 메쏘드
 	 */
 	public int getAccountTotBalance() {
-		return 0;
-	}
+		return getAccountTotBalance();
+		}
+	
 
 	/*
 	 * 4.계좌번호를 인자로받아서 계좌객체주소 한개반환
 	 */
 	
 	public Account findByNo(int no) {
-		Account temp=null;
+		Account findAccount=null;
 		for (int i = 0; i < accounts.length; i++) {
 			if(accounts[i].getNo()==no) {
-				temp=accounts[i];
+				findAccount=accounts[i];
 			}
-		}return temp;
+		}return findAccount;
 	}
 
 	/*
@@ -114,26 +115,39 @@ public class AccountServiceReturn {
 				count++;
 			}  
 		}
-		Account[] tempAccount = new Account[count];
+		Account[] findAccount = new Account[count];
 		int temp=0;
 		for (int i = 0; i < accounts.length; i++) {
 			if(accounts[i].getBalance()>=balance) {
-				tempAccount[temp]=accounts[i];
-				temp++;
+				findAccount[temp++]=accounts[i];
 			}
-		}return tempAccount;
+		}return findAccount;
 	}
 	/*
 	 * 6.계좌이율인자로받아서 인자이상인 계좌들배열객체 참조변수반환
 	 */
 	public Account[] findByIyul(double iyul) {
-		return null;
+		int no =0;
+		for (int i = 0; i < accounts.length; i++) {
+			if(accounts[i].getIyul()>=iyul) {
+				no++;
+			}
+		}
+		Account[] findAccount = new Account[no];
+		int temp=0;
+		for (int i = 0; i < accounts.length; i++) {
+			if(accounts[i].getIyul()>=iyul) {
+				findAccount[temp++]=accounts[i];
+			}
+		}return findAccount; 
 	}
+	
+	
 
 	/*
 	 * 7.계좌주이름 인자로받아서 이름과일치하는계좌들배열객체 참조변수반환
 	 */
-	public Account[] findByName(String name) {
+	
 		/*
 		 * A. 만족하는 객체의갯수구하기 - 예를들어 3개라면
 		 */
@@ -144,7 +158,21 @@ public class AccountServiceReturn {
 		/*
 		 * C. 만족하는Account객체들 Account배열에담기
 		 */
-		return null;
+	public Account[] findByName(String name) {
+		int count=0;
+		for (int i = 0; i < accounts.length; i++) {
+			if(accounts[i].getOwner().equals(name)) {
+				count++;
+		}
+		}	
+			Account[] findAccount=new Account[count]; //B
+			int no=0;
+			
+			for (int j = 0; j < accounts.length; j++) {
+				if (accounts[j].getOwner().equals(name)) {
+					findAccount[no++]=accounts[j];
+				}
+			}return findAccount;
 	}
 
 	/*
@@ -156,9 +184,9 @@ public class AccountServiceReturn {
 		 * 2.입금
 		 * 3.입금계좌 참조변수반환
 		 */
-		
-		return null;
-
+		Account findAccount=findByNo(no);
+		findAccount.deposit(m);
+		return findAccount;
 	}
 
 	/*

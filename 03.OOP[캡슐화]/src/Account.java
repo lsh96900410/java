@@ -32,8 +32,14 @@ public class Account {
 	/*
 	 * 출금
 	 */
-	public void withDraw(int money) {
-		this.balance=this.balance - money ;
+	public void withDraw(int money) throws Exception {
+		
+		if (money > this.balance) {
+			throw new Exception("메시지");
+		}else {
+			this.balance=this.balance - money ;
+		}
+		
 		//this.balance-=money; 
 	}
 	/*

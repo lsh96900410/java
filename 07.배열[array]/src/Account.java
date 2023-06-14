@@ -32,8 +32,11 @@ public class Account {
 	 * 출금
 	 */
 	void withDraw(int money) {
-		this.balance=this.balance - money ;
-		//this.balance-=money; 
+		if (money > this.balance) {
+			
+		}else {
+			this.balance=this.balance - money ;
+		}
 	}
 	/*
 	 * 출력

@@ -43,6 +43,30 @@ public class AccountEncapsulationMain {
 		acc1.print();
 		acc2.print();
 		acc3.print();
+		
+		try {
+			acc3.withDraw(10000000);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 
 }
