@@ -23,6 +23,7 @@ public class FileWriterReaderMain {
 		fw.write("두라인\n");
 		fw.write("세라인\n");
 		fw.write("네라인\n");
+		fw.write("오라인\n");
 		/*
 		 * 채워지지않은 버퍼에있는 데이타를 출력스트림에쓴다. 
 		 */

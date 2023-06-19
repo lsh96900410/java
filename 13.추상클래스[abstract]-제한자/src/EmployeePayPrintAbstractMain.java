@@ -18,6 +18,7 @@ public class EmployeePayPrintAbstractMain {
 		
 		}
 		System.out.println("커밋");
+		System.out.println("커밋2");
 		
 		
 	}
