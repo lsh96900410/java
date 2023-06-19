@@ -17,7 +17,7 @@ public class EmployeePayPrintAbstractMain {
 			System.out.println("------------------------------------------------------------");
 		
 		}
-		
+		System.out.println("커밋");
 		
 		
 	}
