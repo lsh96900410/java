@@ -39,7 +39,7 @@ public class DataOutputInputStreamMain {
 		System.out.println("readChar : "+dis.readChar());
 		System.out.println("readDouble : "+dis.readDouble());
 		System.out.println("readUTF : "+dis.readUTF());
-		
+		dis.close();
 		
 	}
 
