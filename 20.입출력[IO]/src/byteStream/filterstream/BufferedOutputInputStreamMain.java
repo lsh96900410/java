@@ -45,22 +45,6 @@ public class BufferedOutputInputStreamMain {
 		System.out.println();
 		System.out.println("BufferedInputStream.read() <-- bufferedOut.dat");
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	
 	}
 
 }

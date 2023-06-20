@@ -1,5 +1,6 @@
 package charstream;
 
+import java.io.FileReader;
 import java.io.FileWriter;
 
 public class FileWriterReaderMain {
@@ -27,11 +28,49 @@ public class FileWriterReaderMain {
 		/*
 		 * 채워지지않은 버퍼에있는 데이타를 출력스트림에쓴다. 
 		 */
-		
-		
 		fw.flush();
 		fw.close();
 		System.out.println("FileWriter.write() --> fileWriter.txt");
+		
+		FileReader fr=new FileReader("fileWriter.txt");
+		
+		int charCount=0;
+		int readChar=fr.read();
+		charCount++;
+		System.out.println("1.readChar : " + (char)readChar);
+		readChar=fr.read();
+		charCount++;
+		System.out.println("2.readChar : " + (char)readChar);
+		readChar=fr.read();
+		charCount++;
+		System.out.println("3.readChar : " + (char)readChar);
+		while(true) {
+			readChar=fr.read();
+			if(readChar==-1)break;
+			charCount++;
+			System.out.print((char)readChar);
+		}
+		System.out.println();
+		System.out.println(charCount+"글자 읽음");
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
 	}
 
 }
