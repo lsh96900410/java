@@ -51,7 +51,13 @@ public class StudentArrayListMain {
 		 * 4. 번호3번 학생한명 출력
 		 */
 		System.out.println("4.번호3번 학생한명 출력  ");
-		
+		/*for (Student : studentList) {
+			if(stu.getNo()==3) {
+				System.out.println(studentList);
+				break;
+			}
+		}
+		*/
 		/*
 		 * 5. 학점A인 학생들 출력
 		 */
@@ -66,7 +72,6 @@ public class StudentArrayListMain {
 		 * 7.번호3번학생한명삭제
 		 */
 		System.out.println("7.번호3번학생삭제");
-		
 		
 		
 		/*

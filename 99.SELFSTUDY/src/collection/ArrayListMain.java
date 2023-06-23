@@ -1,6 +1,7 @@
 package collection;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class ArrayListMain {
 
@@ -15,6 +16,8 @@ public class ArrayListMain {
 		
 		ArrayList list = new ArrayList(); // 타입설정 x , object로 사용
 		ArrayList<Account> arrayList=new ArrayList<Account>(5); //타입설정 o  , Account 객체로 사용 , 크기 5로 지정
+		
+		Account[] acar=new Account[2];
 		
 		/*
 		 ArrayList add 메소드
@@ -63,8 +66,18 @@ public class ArrayListMain {
 		*/
 		
 		
+		
+		
+		
+		
+		
+		
+		
 		//  ArrayList 값 set 메쏘드 사용해서 변경하기 [ set(int index, Object) ]
 		// ==> 변경하기 위해서는 변경 희망값의 인덱스 번호를 알아야함
+		
+		
+		
 		
 		arrayList.set(4, arrayList.get(5)); //4번 인덱스 arrayList 5번인덱스 값 대입
 		
@@ -79,6 +92,9 @@ public class ArrayListMain {
 		==> get 메쏘드 사용해서 5번 인덱스 값 호출 후 set 메쏘드를 통해 4번 인덱스에 대입
 		*/
 		
+		
+		
+		
 		/* ArrayList 값 삭제하기
 		 	= remove(), clear() 메쏘드 존재
 			clear()  : 모든값 삭제 시 사용
@@ -86,6 +102,9 @@ public class ArrayListMain {
 			  - remove( Object ) : 해당 arrayList에 인자로 받은 Object와 같은 값을 서치후 삭제함
 			  - remove ( int index ) : 해당 arrayList의 index에 해당하는 값 삭제
 		*/
+		
+		
+		
 		
 		arrayList.remove(5); // 5번 인덱스 삭제
 		
@@ -109,6 +128,9 @@ public class ArrayListMain {
 		
 		
 		
+		
+		
+		
 		//ArrayList 크기 구하기 ==> size() 메쏘드
 		System.out.println(arrayList.size()); // ==> 4
 		
@@ -127,8 +149,17 @@ public class ArrayListMain {
 		}
 		*/
 		
+		
+		
+		
+		
+		
+		
+		
+		
 		/*
-		 ArrayList 값 검색하기 ==> contain() , indexOf()	
+		 
+		 	ArrayList 값 검색하기 ==> contain() , indexOf()	
 			contain() : 값이 있는지 여부만 파악
 			indexOf() : 값이 있는 인덱스 위치를 알려주고 없으면 -1 
 		*/
@@ -137,6 +168,45 @@ public class ArrayListMain {
 		System.out.println(arrayList.indexOf(a2)); // ==> 0 
 		arrayList.remove(0); 
 		System.out.println(arrayList.indexOf(a2)); // 0번인덱스 삭제후 a2 검색 ==> -1 : 
+		
+		
+		 
+		
+		// 번호 3번인 계좌 찾은 뒤 출력
+		for (Account account : arrayList) {
+			if(account.getNo()==3) {
+				System.out.println(account);
+			}
+				
+		}
+		
+		
+		
+		ArrayList<String> colors =new ArrayList<>(Arrays.asList("Black","Red","BLUE","GREEN")); 
+		/*
+		Arrays.asList()는 Arrays의 private 정적 클래스인 ArrayList를 리턴한다.
+		java.util.ArrayList 클래스와는 다른 클래스이다.
+		 set(), get(), contains()  ok    ,   add() x
+		 
+		*/
+		System.out.println(colors);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
