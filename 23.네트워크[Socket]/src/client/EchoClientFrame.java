@@ -86,7 +86,17 @@ public class EchoClientFrame extends JFrame {
 					PrintWriter pw=new PrintWriter(osw);
 					pw.println(echoStr);
 					pw.flush(); // 안하면 서버 꺼짐
-				
+					/*
+						3. 서버에서 전송되는 데이타 읽기
+							-inputStream 얻기
+							- inputStream(byte) ==> Reader(char
+					*/
+					
+					BufferedReader br= new BufferedReader(new InputStreamReader(socket.getInputStream()));
+					
+					String serverEchoStr=br.readLine();
+					displayTA.append(serverEchoStr+"\n");
+					
 					socket.close();
 					
 				}catch (Exception e1) {

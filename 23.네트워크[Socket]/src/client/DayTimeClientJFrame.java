@@ -46,6 +46,7 @@ public class DayTimeClientJFrame extends JFrame {
 	 * Create the frame.
 	 */
 	public DayTimeClientJFrame() {
+		setTitle("DayTimeClient");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -63,7 +64,7 @@ public class DayTimeClientJFrame extends JFrame {
 					/*
 					 * 1.Socket생성
 					 */
-					Socket socket = new Socket("192.168.15.31",8000);
+					Socket socket = new Socket("192.168.15.8",8000);
 					/*
 					 * 2.Socket으로부터 InputStream얻기
 					 *    - InputStream얻기
@@ -74,7 +75,7 @@ public class DayTimeClientJFrame extends JFrame {
 					InputStreamReader isr= new InputStreamReader(in);
 					BufferedReader br = new BufferedReader(isr);
 					String serverTime = br.readLine();
-					System.out.println(serverTime);
+					//System.out.println(serverTime);
 					timeDispayLabel.setText(serverTime);
 					br.close();
 					socket.close();

@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.lang.String;
 
 public class ScannerMain {
 
@@ -16,7 +17,8 @@ public class ScannerMain {
 		int eng=scanner.nextInt();
 		System.out.print("수학점수 : ");
 		int math=scanner.nextInt();
-		
+		System.out.println(nameStr.length());
+	
 		int tot=kor+eng+math;
 		double avg=tot/3;
 	
